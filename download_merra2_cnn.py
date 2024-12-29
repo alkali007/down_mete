@@ -1,6 +1,7 @@
 import os
 import requests
 from datetime import datetime, timedelta
+import calendar
 
 def download_merra2_cnn(start_year, end_year, start_month, end_month, save_path):
     # Define the new base URL pattern
@@ -12,7 +13,8 @@ def download_merra2_cnn(start_year, end_year, start_month, end_month, save_path)
     # Loop through the specified year and month
     for year in range(start_year, end_year + 1):
         for month in range(start_month, end_month + 1):
-            last_day_of_month = (datetime(year, month + 1, 1) - timedelta(days=1)).day
+            # Get the last day of the month using calendar.monthrange
+            _, last_day_of_month = calendar.monthrange(year, month)
             for day in range(1, last_day_of_month + 1):
                 user_date = f"{year}{str(month).zfill(2)}{str(day).zfill(2)}"
                 url = base_url.format(year=year, date=user_date)
