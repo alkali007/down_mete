@@ -28,8 +28,7 @@ def download_merra2_cnn(start_year, end_year, start_month, end_month, save_path)
         save_path_year = os.path.join(save_path, year_from_url)
 
         # Enter your Earthdata access token
-        access_token = 'eyJ0eXAiOiJKV1QiLCJvcmlnaW4iOiJFYXJ0aGRhdGEgTG9naW4iLCJzaWciOiJlZGxqd3RwdWJrZXlfb3BzIiwiYWxnIjoiUlMyNTYifQ.eyJ0eXBlIjoiVXNlciIsInVpZCI6InJpZGhhZmF0b255MDAiLCJleHAiOjE3NDAzMTc1NjcsImlhdCI6MTczNTEzMzU2NywiaXNzIjoiaHR0cHM6Ly91cnMuZWFydGhkYXRhLm5hc2EuZ292IiwiaWRlbnRpdHlfcHJvdmlkZXIiOiJlZGxfb3BzIiwiYWNyIjoiZWRsIiwiYXNzdXJhbmNlX2xldmVsIjozfQ.hZGSE1jf9gNSRMQf2MoR8Y4WvAmLhrxUzWqaBivcGddmfVZ0A0hL94qfV--60Cd45T6f5QxWwvM3XzSpTRhvMxBXez4KBzZhSqk9pUKGJBsqtffYF26NY_JumPVNxJO6_KZ133zekJlFjHXP_yIE6k8oR_4NJ5ZfuOhnzk5MNCXuLu4MbvpTVlmyyW9NXgtWIAP-N7RO9fKH9h17sREER5LEIsC8nDb8oFBg8Y1i7sv6tn-svMBYjP0uoi4W5wgpDuA-J4_xqDC_SNDAnoHnPDTu0Jnm1rEoHodARpo7RqOpShvfF4exm17wSVVmC3iXF5jZKEIVdZQ6puPM8KvOGw'
-
+        access_token = 'eyJ0eXAiOiJKV1QiLCJvcmlnaW4iOiJFYXJ0aGRhdGEgTG9naW4iLCJzaWciOiJlZGxqd3RwdWJrZXlfb3BzIiwiYWxnIjoiUlMyNTYifQ.eyJ0eXBlIjoiVXNlciIsInVpZCI6InJpZGhhZmF0b255MDAiLCJleHAiOjE3NDY3MzgxNDMsImlhdCI6MTc0MTU1NDE0MywiaXNzIjoiaHR0cHM6Ly91cnMuZWFydGhkYXRhLm5hc2EuZ292IiwiaWRlbnRpdHlfcHJvdmlkZXIiOiJlZGxfb3BzIiwiYWNyIjoiZWRsIiwiYXNzdXJhbmNlX2xldmVsIjozfQ.njFeiKYsfYL9ZKe_ztNFgUSaVTdnSL729QQR6IqACDlD2vD_bBulLAqEdKZ4eC6aDJbuN03drqk3DyA2CfFrdu1chHOETJHK3pDzh_b2ugW9Ctt0lcllM55aGtFZl2xdDptp1ipFsIE9IHWgrBvY9Fw88AJ7CbhUBYVDPpa3Sc9ylwFDrPNeNJkF2YZFGBjy4puIKjnl6ZMgt0QV20Oy4lxlL0-y-SgxuclF3aTxf69ZNgGhWia4WT9LiP0ZBNK2zSKCb4cpAk6yXbzSktkc3QsxjsSlgucDhe192alXiR98pGzMNnzzR8dMg4DhdfUP7qqpx3pbfCQjM9FPhVLnVw'
         # Extract file name from the URL
         filename = url.split('/')[-1].split('?')[0]  # More robust file name extraction
         file_path = os.path.join(save_path_year, filename)  # Specify the full path to save the file
